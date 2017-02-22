@@ -1,0 +1,216 @@
+﻿@charset "utf-8";
+/* CSS Document */
+@font-face {font-family:ng; src:url(../../assets/font/NanumGothic.eot); src: url(../../assets/font/NanumGothic.woff) format('woff') }
+@font-face {font-family:ngb;src:url(../../assets/font/NanumGothicBold.eot);src: url(../../assets/font/NanumGothicBold.woff) format('woff'),url(../../assets/font/NanumGothicBold.ttf) format('truetype'),url(http://digiatom.ajashop.co.kr/dunkin/img/NanumGothicBold.svg#webfonturzspG4F) format('svg')}
+
+/*기본스타일*/
+body {margin:0px 0px 0px 0px; padding:0px 0px 0px 0px; overflow:auto}
+.body {margin:0px 0px 0px 0px; overflow:auto}
+img {border:none; padding:0px; margin:0px; font-size:0px; line-height:0px; vertical-align:top}
+td	{font-family:"dotum,돋움"; color:#666; font-size:11px;line-height:1.2}
+ul,li {list-style:none; margin:0px; padding:0px}
+h1,h2,h3,h4,h5,h6,div,p,span,em,dl,dd,dt {padding:0px 0px 0px 0px; margin:0px 0px 0px 0px; font-family:"dotum,돋움"; color:#666; font-size:12px;line-height:1.2; text-decoration:none}
+em {font-style:normal}
+div:after{content:"";display:block;clear:both}
+
+A:link    {color:#635C5A;text-decoration:none}
+A:visited {color:#545454;text-decoration:none}
+A:hover  {color:#333;text-decoration:none}
+
+/*** 공통 레이아웃 ***/
+
+html, body, .l-wrap {overflow:hidden;height:100%;min-height:100%;}
+.l-wrap {box-sizing:content-box}
+.l-main {position:relative;top:0;left:0;width:100%;height:100%;}
+.l-main .handle {position:absolute;top:0;left:0;width:100%;height:100%;opacity:1;}
+.page {overflow:hidden;position:relative;top:0;left:0;height:100%;*zoom:1;}
+.page:after {content:"";display:block;clear:both}
+
+div.main_wrap {width:100%; height:100%; overflow:hidden;background-color:#FFF}
+
+/*** 정렬,display ***/
+.ta_l {text-align:left !important}
+.ta_c {text-align:center !important}
+.ta_r {text-align:right !important}
+.hide {display:none}
+
+/* 타이틀 */
+.board_title {height:110px; font:60px/110px ngb; color:#000; text-align:center}
+
+/* 보드01 */
+div.board01_wrap {width:100%; position:relative; overflow:hidden; height:100%; background-image:url('../../assets/images/Common/board_a_bg.jpg');}
+div.board01_wrap .floating_bg {width:100%; height:100%; position:absolute; top:0px; left:0px; background:url(assets/images/common/board_a_bg.jpg) no-repeat; z-index:30}
+div.board01_wrap .facebook_wrap {width:1627px; height:333px; position:absolute; bottom:10%; left:15%;/* background:url(../../img/common/board01_word_box.png) no-repeat;*/ z-index:40}
+div.board01_wrap .facebook_wrap div.content {margin:155px 0 0 300px; width:1285px; height:150px}
+div.board01_wrap .movie_area {overflow:hidden;position:relative;width:90%; height:90%; margin:55px auto 0;}
+div.board01_wrap .movie_area video {position:absolute;top:0;left:0;width:90%;height:90%;z-index:31;}
+
+div.board01_wrap ul.facebook:after {display:block; content:""; clear:both}
+div.board01_wrap ul.facebook li {float:left}
+div.board01_wrap ul.facebook li p.photo {position:relative}
+div.board01_wrap ul.facebook li p.photo:before {content:""; display:block; width:124px; height:124px; background:url(assets/images/common/facebook_photo_floating.png) no-repeat; position:absolute; top:0px; left:0px}
+div.board01_wrap ul.facebook li:first-child {width:159px; border-right:1px solid #000;height:150px}
+div.board01_wrap ul.facebook li.content {padding-left:30; width:915px}
+div.board01_wrap ul.facebook li.content div.wrap {width:915px; height:150px; overflow:hidden}
+div.board01_wrap ul.facebook li.last-child {width:180px}
+div.board01_wrap ul.facebook li span {display:block; font:16px ng; color:#333}
+div.board01_wrap ul.facebook li span.icon {background:url(../../img/icon/icon_facebook.png) no-repeat; height:40px}
+div.board01_wrap ul.facebook li span.date {margin-top:20px; font-size:26px;text-indent:40px; background-position:0 0}
+div.board01_wrap ul.facebook li span.like {background-position:0 -40px; text-indent:50px; font:26px/40px ngb}
+div.board01_wrap ul.facebook li span.comment {margin-top:10px; background-position:0 -80px; text-indent:50px; font:26px/40px ngb}
+div.board01_wrap ul.facebook li span.name{margin-top:5px}
+div.board01_wrap ul.facebook li span.content {font-size:26px; line-height:32px}
+
+.video-mask{
+    width: 90%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%); 
+    -webkit-transform: rotate(0.000001deg); 
+    -webkit-border-radius: 50px; 
+    -moz-border-radius: 50px;
+    border-radius: 50px; 
+    border-color: #E6457C;
+    border-width: 7px;
+    border-style: solid;
+    overflow: hidden; 
+}
+
+
+/* obj 공통 */
+.obj {
+    position:absolute;bottom:0;z-index:100;
+    -ms-transform:  translate(0px,400px);
+    -webkit-transform:  translate(0px,400px);
+    transform:  translate(0px,400px);
+}
+
+.obj.active{
+    -ms-animation: obj-ani ease-in-out 7s;
+    -ms-transform-origin: 50% 50%;
+    -webkit-animation: obj-ani ease-in-out 7s;
+    -webkit-transform-origin: 50% 50%;
+    animation: obj-ani ease-in-out 7s;
+    transform-origin: 50% 50%;
+}
+
+@-ms-keyframes obj-ani {
+    0% {
+        -ms-transform:  translate(0px,400px)  ;
+    }
+    10% {
+        -ms-transform:  translate(0px,0)  ;
+    }
+    90% {
+        -ms-transform:  translate(0px,0)  ;
+    }
+    100% {
+        -ms-transform:  translate(0px,400px)  ;
+    }
+}
+
+@-webkit-keyframes obj-ani {
+    0% {
+        -webkit-transform:  translate(0px,400px)  ;
+    }
+    10% {
+        -webkit-transform:  translate(0px,0)  ;
+    }
+    90% {
+        -webkit-transform:  translate(0px,0)  ;
+    }
+    100% {
+        -webkit-transform:  translate(0px,400px)  ;
+    }
+}
+
+@keyframes obj-ani {
+    0% {
+        transform:  translate(0px,400px)  ;
+    }
+    10% {
+        transform:  translate(0px,0)  ;
+    }
+    90% {
+        transform:  translate(0px,0)  ;
+    }
+    100% {
+        transform:  translate(0px,400px)  ;
+    }
+}
+
+.obj-talk {
+    position:absolute;
+    -ms-transform:  scaleX(0.00) scaleY(0.00) ;
+    -webkit-transform:  scaleX(0.00) scaleY(0.00) ;
+    transform:  scaleX(0.00) scaleY(0.00) ;
+}
+.obj-talk.active{
+    -ms-animation: obj-talk-ani ease-in-out 7s;
+    -ms-transform-origin: 50% 50%;
+    -webkit-animation: obj-talk-ani ease-in-out 7s;
+    -webkit-transform-origin: 50% 50%;
+    animation: obj-talk-ani ease-in-out 7s;
+    transform-origin: 50% 50%;
+}
+
+
+@-ms-keyframes obj-talk-ani {
+    0% {
+        -ms-transform:  scaleX(0.00) scaleY(0.00) ;
+    }
+    20% {
+        -ms-transform:  scaleX(0.00) scaleY(0.00) ;
+    }
+    30% {
+        -ms-transform:  scaleX(1.00) scaleY(1.00) ;
+    }
+    85% {
+        -ms-transform:  scaleX(1.00) scaleY(1.00) ;
+    }
+    100% {
+        -ms-transform:  scaleX(0.00) scaleY(0.00) ;
+    }
+}
+
+@-webkit-keyframes obj-talk-ani {
+    0% {
+        -webkit-transform:  scaleX(0.00) scaleY(0.00) ;
+    }
+    20% {
+        -webkit-transform:  scaleX(0.00) scaleY(0.00) ;
+    }
+    30% {
+        -webkit-transform:  scaleX(1.00) scaleY(1.00) ;
+    }
+    85% {
+        -webkit-transform:  scaleX(1.00) scaleY(1.00) ;
+    }
+    100% {
+        -webkit-transform:  scaleX(0.00) scaleY(0.00) ;
+    }
+}
+
+
+@keyframes obj-talk-ani {
+    0% {
+        transform:  scaleX(0.00) scaleY(0.00) ;
+    }
+    20% {
+        transform:  scaleX(0.00) scaleY(0.00) ;
+    }
+    30% {
+        transform:  scaleX(1.00) scaleY(1.00) ;
+    }
+    85% {
+        transform:  scaleX(1.00) scaleY(1.00) ;
+    }
+    100% {
+        transform:  scaleX(0.00) scaleY(0.00) ;
+    }
+}
+
+.obj-p1-c1 {}
+.obj-p1-c1 .obj-talk {top: 35%;left: 75%;}

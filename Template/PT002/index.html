@@ -1,0 +1,62 @@
+﻿<link rel="stylesheet" href="assets/css/PT002.css" />
+<div class="l-wrap">
+    <div class="l-main">
+        <div id="js-pageHandle" class="handle">
+            <section class="page">
+
+                <div class="main_wrap">
+
+                    <div class="board02_wrap">
+                        <div class="board_title">{{title}}</div>
+                        <!-- 주요메뉴 -->
+                        <ul class="menu_quarter">
+                            {{#each this.menu}}
+                                <li>
+                                    <div class="gallery_type_wrap">
+                                        <div class="info">
+                                            <span class="name_kr">{{menuNameKor}}</span>
+                                            <span class="name_eng">{{menuNameEng}}</span>
+                                            <span class="price"><em>콤보</em>{{comboPrice}}</span>
+                                            <span class="price"><em>단품</em>{{singlePrice}}</span>
+                                        </div>
+                                        <div class="menu_pic"><img src="{{menuImage}}" alt="" /></div>
+                                    </div>
+                                </li>
+                            {{/each}}
+                        </ul>
+                        <!-- //주요메뉴 -->
+
+                        <!-- 가운데 대표 메뉴 -->
+                        <div class="center_menu"><img src="{{mainMenuImage}}" alt="" /></div>
+                        <!-- //가운데 대표 메뉴 -->
+
+                        <!-- 오픈시간 -->
+                        <div class="center_time">{{openTimeText}}</div>
+                        <!-- //오픈시간 -->
+
+                        <!-- 하단 캐릭터 -->
+                        <div class="character_wrap">
+                            <span class="obj obj-p2-c2">
+                                <span class="obj-person"><img src="assets/images/p2_c2.png" alt=""/></span>
+                                <span class="obj-talk"><img src="assets/images/p2_c2_m.png" alt=""/></span>
+                            </span>
+                            <span class="obj obj-p2-c1">
+                                <span class="obj-person"><img src="assets/images/p2_c1.png" alt=""/></span>
+                                <span class="obj-talk"><img src="assets/images/p2_c1_m.png" alt=""/></span>
+                            </span>
+                            <span class="obj obj-p2-c4">
+                                <span class="obj-person"><img src="assets/images/p2_c4.png" alt=""/></span>
+                                <span class="obj-talk"><img src="assets/images/p2_c4_m.png" alt=""/></span>
+                            </span>
+                            <span class="obj obj-p2-c3">
+                                <span class="obj-person"><img src="assets/images/p2_c3.png" alt=""/></span>
+                                <span class="obj-talk"><img src="assets/images/p2_c3_m.png" alt=""/></span>
+                            </span>
+                        </div>
+                        <!-- //하단 캐릭터 -->
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

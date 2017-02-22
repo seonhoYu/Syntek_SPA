@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head lang="en">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="utf-8">
+    <META http-equiv="Expires" content="-1">
+    <META http-equiv="Pragma" content="no-cache">
+    <META http-equiv="Cache-Control" content="No-Cache"> 
+
+	<title>Single Page App Without A Framework</title>
+
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
+	<link href="assets/css/styles.css" rel="stylesheet">
+    <!--<link href="assets/css/elementTransitions.css" rel="stylesheet" />-->
+</head>
+
+<body style="overflow:visible;">
+
+	<div class="main-content">
+        <!--<iframe id="previewArea" width="1920" height="1080">
+            
+        </iframe>-->
+        <section id="section1" style="height:1080px;">
+
+        </section>
+    </div>
+    <div id="temp"></div>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0/handlebars.min.js"></script>
+    <!--<script src="assets/js/elementTransitions.js"></script>-->
+    <script src="assets/js/script.js"></script>
+    <script type="text/javascript">
+        var getUrlParameter = function getUrlParameter(sParam) {
+            var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+                sURLVariables = sPageURL.split('&'),
+                sParameterName,
+                i;
+
+            for (i = 0; i < sURLVariables.length; i++) {
+                sParameterName = sURLVariables[i].split('=');
+
+                if (sParameterName[0] === sParam) {
+                    return sParameterName[1] === undefined ? true : sParameterName[1];
+                }
+            }
+        };
+
+        $(document).ready(function () {
+            var template = getUrlParameter("template");
+            var list = $('#section1');
+            var prefix = 'Template/' + template;
+
+            $.get(prefix + "/index.html", function (html) {
+                var updatedData = html.replace(/assets\/+/g, "Template/" + template + "/assets/");
+                list.append(updatedData);
+
+                //var theTemplate = Handlebars.compile(html);
+
+                //$.getJSON('Template/' + template + "data/contents.json", function (data) {
+                //    list.append(theTemplate(data));
+                //});
+            });
+        })
+    </script>
+</body>
+</html>

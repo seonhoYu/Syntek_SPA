@@ -1,0 +1,35 @@
+﻿{
+  "title": "MORNING COMBO",
+  "openTimeText": "OPEN - 11:00",
+  "mainMenuImage" :  "assets/images/board02_center_menu.png",
+  "menu": [
+    {
+      "menuNameKor": "햄에그 잉글리쉬머핀",
+      "menuNameEng": "Ham & Egg English Muffin",
+      "menuImage" :  "assets/images/menu_pic01.png",
+      "comboPrice": "3,500",
+      "singlePrice": "3,000"
+    },
+    {
+      "menuNameKor": "할라피뇨소시지 잉글리쉬머핀",
+      "menuNameEng": "Jalapeno Sausage English Muffin",
+      "menuImage" :  "assets/images/menu_pic02.png",
+      "comboPrice": "3,900",
+      "singlePrice": "3,000"
+    },
+    {
+      "menuNameKor": "포테이토 미트 잉글리쉬머핀",
+      "menuNameEng": "Potato Meat English Muffin",
+      "menuImage" :  "assets/images/menu_pic03.png",
+      "comboPrice": "3,500",
+      "singlePrice": "3,400"
+    },
+    {
+      "menuNameKor": "크림치즈 베이글",
+      "menuNameEng": "Cream Cheese Bagel",
+      "menuImage" :  "assets/images/menu_pic04.png",
+      "comboPrice": "3,900",
+      "singlePrice": ""
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "screenId": 1,
+  "isHubDevice": true,
+  "screenRoller": [
+    {
+      "id": 1,
+      "interval": 5000
+    },
+    {
+      "id": 2,
+      "interval": 5000
+    }
+  ]
+}

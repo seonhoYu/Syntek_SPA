@@ -1,0 +1,12 @@
+[
+  {
+    "pageId": 1,
+    "template": "PT001",
+    "url": "Template/PT001/index.html"
+  },
+  {
+    "pageId": 2,
+    "template": "PT002" ,
+    "url": "Template/PT002/index.html"
+  }
+]

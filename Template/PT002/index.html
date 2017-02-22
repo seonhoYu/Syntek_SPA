@@ -16,8 +16,12 @@
                                         <div class="info">
                                             <span class="name_kr">{{menuNameKor}}</span>
                                             <span class="name_eng">{{menuNameEng}}</span>
-                                            <span class="price"><em>콤보</em>{{comboPrice}}</span>
-                                            <span class="price"><em>단품</em>{{singlePrice}}</span>
+                                            {{#if comboPrice}}
+                                                <span class="price"><em>콤보</em>{{comboPrice}}</span>
+                                            {{/if}}
+                                            {{#if singlePrice}}
+                                                <span class="price"><em>단품</em>{{singlePrice}}</span>
+                                            {{/if}}
                                         </div>
                                         <div class="menu_pic"><img src="{{menuImage}}" alt="" /></div>
                                     </div>
